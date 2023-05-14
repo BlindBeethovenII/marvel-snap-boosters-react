@@ -688,7 +688,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-syntax-flow@npm:^7.18.6":
+"@babel/plugin-syntax-flow@npm:^7.18.6, @babel/plugin-syntax-flow@npm:^7.21.4":
   version: 7.21.4
   resolution: "@babel/plugin-syntax-flow@npm:7.21.4"
   dependencies:
@@ -1164,7 +1164,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-react-jsx@npm:^7.18.6":
+"@babel/plugin-transform-react-jsx@npm:^7.18.6, @babel/plugin-transform-react-jsx@npm:^7.21.5":
   version: 7.21.5
   resolution: "@babel/plugin-transform-react-jsx@npm:7.21.5"
   dependencies:
@@ -8682,6 +8682,8 @@ __metadata:
   resolution: "marvel-snap-boosters-react@workspace:."
   dependencies:
     "@babel/core": ^7.16.0
+    "@babel/plugin-syntax-flow": ^7.21.4
+    "@babel/plugin-transform-react-jsx": ^7.21.5
     "@pmmmwh/react-refresh-webpack-plugin": ^0.5.3
     "@svgr/webpack": ^5.5.0
     "@testing-library/jest-dom": ^5.16.5

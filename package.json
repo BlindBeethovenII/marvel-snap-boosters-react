@@ -5,6 +5,8 @@
   "private": true,
   "dependencies": {
     "@babel/core": "^7.16.0",
+    "@babel/plugin-syntax-flow": "^7.21.4",
+    "@babel/plugin-transform-react-jsx": "^7.21.5",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
     "@svgr/webpack": "^5.5.0",
     "@testing-library/jest-dom": "^5.16.5",
@@ -64,7 +66,7 @@
     "test": "node scripts/test.js",
     "predeploy": "yarn build",
     "deploy": "yarn predeploy && gh-pages -d build"
-},
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

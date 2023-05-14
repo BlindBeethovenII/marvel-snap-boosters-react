@@ -129,5 +129,8 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# production
+/build
+
 # git log info generated file
 /src/_generated_git_log.js
