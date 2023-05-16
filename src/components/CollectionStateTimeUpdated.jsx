@@ -19,11 +19,15 @@ const divstyle = {
 };
 
 const CollectionStateTimeUpdated = () => {
-  const { collectionState } = useContext(GameStateContext);
+  const { timeUpdated } = useContext(GameStateContext);
+
+  if (!timeUpdated) {
+    return null;
+  }
 
   return (
     <div>
-      <div style={divstyle}>{`CollectionState CardDefStats updated ${moment(collectionState.ServerState.CardDefStats.TimeUpdated).format('D MMM YYYY HH:MM')}`}</div>
+      <div style={divstyle}>{`CollectionState CardDefStats updated ${moment(timeUpdated).format('D MMM YYYY HH:MM')}`}</div>
     </div>
   );
 };

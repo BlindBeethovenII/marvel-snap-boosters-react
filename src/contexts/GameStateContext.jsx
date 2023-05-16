@@ -9,8 +9,10 @@ const collectionStateJSON = require('./CollectionState.json');
 const GameStateContext = React.createContext({});
 
 export const GameStateContextProvider = ({ children }) => {
-  // collection state - loaded from CollectionState.json file
-  const [collectionState] = useState(collectionStateJSON);
+  // interesting parts of the CollectionState.json file
+  const [timeUpdated] = useState(collectionStateJSON?.ServerState?.CardDefStats?.TimeUpdated);
+  const [stats] = useState(collectionStateJSON?.ServerState?.CardDefStats?.Stats);
+  const [cards] = useState(collectionStateJSON?.ServerState?.Cards);
 
   // ----------- //
   // the context //
@@ -20,9 +22,13 @@ export const GameStateContextProvider = ({ children }) => {
   // we are encouraged to do this via a useMemo now
   const context = useMemo(() => ({
     // collection state
-    collectionState,
+    timeUpdated,
+    stats,
+    cards,
   }), [
-    collectionState,
+    timeUpdated,
+    stats,
+    cards,
   ]);
 
   return <GameStateContext.Provider value={context}>{children}</GameStateContext.Provider>;
