@@ -201,9 +201,17 @@ const showUpgrades = (upgradeArray, level) => {
 
 
 const ShowUpgrades = () => {
-  const { stats, cards } = useContext(GameStateContext);
+  const { loaded, stats, cards } = useContext(GameStateContext);
 
   if (!stats || !cards) {
+    if (loaded) {
+      // whatever JSON file was loaded didn't have the right content
+      return (
+        <div style={divstyle}>{'\nERROR: Could not find the expected content in the file that was loaded.  Are you sure it is a Marvel Snap CollectionState.json file?'}</div>
+      );
+    }
+
+    // we are not loaded yet - so show nothing
     return null;
   }
 

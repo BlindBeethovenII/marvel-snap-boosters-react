@@ -6,10 +6,10 @@ const GameStateContext = React.createContext({});
 
 export const GameStateContextProvider = ({ children }) => {
   // interesting parts of the CollectionState.json file
-  const [timeUpdated] = useState(undefined);
-  const [stats] = useState(undefined);
-  const [cards] = useState(undefined);
-  const [loaded] = useState(false);
+  const [timeUpdated, setTimeUpdated] = useState(undefined);
+  const [stats, setStats] = useState(undefined);
+  const [cards, setCards] = useState(undefined);
+  const [loaded, setLoaded] = useState(false);
 
   // const [timeUpdated] = useState(collectionStateJSON?.ServerState?.CardDefStats?.TimeUpdated);
   // const [stats] = useState(collectionStateJSON?.ServerState?.CardDefStats?.Stats);
@@ -22,11 +22,17 @@ export const GameStateContextProvider = ({ children }) => {
   // expose our state and state functions via the context
   // we are encouraged to do this via a useMemo now
   const context = useMemo(() => ({
-    // collection state
     timeUpdated,
+    setTimeUpdated,
+
     stats,
+    setStats,
+
     cards,
+    setCards, 
+  
     loaded,
+    setLoaded,
   }), [
     timeUpdated,
     stats,

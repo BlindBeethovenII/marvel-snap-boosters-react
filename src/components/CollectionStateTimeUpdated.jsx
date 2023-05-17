@@ -11,6 +11,7 @@ const CollectionStateTimeUpdated = () => {
   const { timeUpdated } = useContext(GameStateContext);
 
   if (!timeUpdated) {
+    // we are not loaded yet - so show nothing
     return null;
   }
 
