@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Marvel Snap Boosters",
+  "name": "Basic web app to analyse a Marvel Snap CollectionState.json file to determine the card upgrades available given the boosters available",
   "icons": [
     {
       "src": "favicon.ico",

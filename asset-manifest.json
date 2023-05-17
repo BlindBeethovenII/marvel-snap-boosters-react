@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/marvel-snap-boosters-react/static/css/main.bf8c52b4.css",
-    "main.js": "/marvel-snap-boosters-react/static/js/main.b7aa0417.js",
+    "main.js": "/marvel-snap-boosters-react/static/js/main.eb13af02.js",
     "index.html": "/marvel-snap-boosters-react/index.html",
     "main.bf8c52b4.css.map": "/marvel-snap-boosters-react/static/css/main.bf8c52b4.css.map",
-    "main.b7aa0417.js.map": "/marvel-snap-boosters-react/static/js/main.b7aa0417.js.map"
+    "main.eb13af02.js.map": "/marvel-snap-boosters-react/static/js/main.eb13af02.js.map"
   },
   "entrypoints": [
     "static/css/main.bf8c52b4.css",
-    "static/js/main.b7aa0417.js"
+    "static/js/main.eb13af02.js"
   ]
 }
