@@ -2,17 +2,18 @@ import React, { useState, useMemo } from 'react';
 
 import PropTypes from 'prop-types';
 
-const collectionStateJSON = require('./CollectionState.json');
-
-// import logIfDevEnv from '../shared/logIfDevEnv';
-
 const GameStateContext = React.createContext({});
 
 export const GameStateContextProvider = ({ children }) => {
   // interesting parts of the CollectionState.json file
-  const [timeUpdated] = useState(collectionStateJSON?.ServerState?.CardDefStats?.TimeUpdated);
-  const [stats] = useState(collectionStateJSON?.ServerState?.CardDefStats?.Stats);
-  const [cards] = useState(collectionStateJSON?.ServerState?.Cards);
+  const [timeUpdated] = useState(undefined);
+  const [stats] = useState(undefined);
+  const [cards] = useState(undefined);
+  const [loaded] = useState(false);
+
+  // const [timeUpdated] = useState(collectionStateJSON?.ServerState?.CardDefStats?.TimeUpdated);
+  // const [stats] = useState(collectionStateJSON?.ServerState?.CardDefStats?.Stats);
+  // const [cards] = useState(collectionStateJSON?.ServerState?.Cards);
 
   // ----------- //
   // the context //
@@ -25,10 +26,12 @@ export const GameStateContextProvider = ({ children }) => {
     timeUpdated,
     stats,
     cards,
+    loaded,
   }), [
     timeUpdated,
     stats,
     cards,
+    loaded,
   ]);
 
   return <GameStateContext.Provider value={context}>{children}</GameStateContext.Provider>;
