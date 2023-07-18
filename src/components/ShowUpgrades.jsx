@@ -140,7 +140,7 @@ const nextRarityLevel = rarity => {
   } else if (rarity === 'Uncommon') {
       return 'Rare';
   } else if (rarity === 'Common') {
-      return 'Common';
+      return 'Uncommon';
   } else {
       console.error(`Unknown rarity: ${rarity}`);
   }
@@ -242,6 +242,7 @@ const ShowUpgrades = () => {
         const upgradeRarity = calcUpgradeRarity(rarity, boosters);
         // only interested if an upgrade is possible
         if (upgradeRarity) {
+          // console.log(`About to call boostersRequired for ${cardToString(card)} with rarity=${rarity}; upgradeRarity=${upgradeRarity}; boosters=${boosters}`);
           const required = boostersRequired(rarity, upgradeRarity);
           // hold the info I need to print in an object and put in the corresponding upgrade arrary
           const upgradeInfo = {

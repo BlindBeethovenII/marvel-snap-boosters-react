@@ -134,3 +134,6 @@ dist
 
 # git log info generated file
 /src/_generated_git_log.js
+
+# my orts folder
+/orts
